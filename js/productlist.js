@@ -7,7 +7,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=50`)
   .then((response) => response.json())
   .then((data) => {
     data.forEach((product) => {
-      productList.innerHTML += `<article class="smallproduct ${product.soldout ? " soldout" : ""} ${product.discount ? " onsale" : ""}" >
+      productList.innerHTML += `<article class="productlist ${product.soldout ? " soldout" : ""} ${product.discount ? " onsale" : ""}" >
 <div class="image_elements_container">
 <a href="product.html?id=${product.id}"> <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="puma sko" /></a>
 <p class="soldout_text">Sold Out</p>
